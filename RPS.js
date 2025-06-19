@@ -8,12 +8,12 @@ let random;
 function getComputerChiose(){
     random = Math.floor(Math.random() * 3) + 1; 
     if (random == 1) {
-        return "Rock";
+        return "Computer: Rock";
         
     } else if (random == 2) {
-        return "Paper";
+        return "Computer: Paper";
     } else {
-        return "Scissors";
+        return "Computer: Scissors";
     }
     
 }
