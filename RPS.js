@@ -25,10 +25,10 @@ rockbtn.onclick = function(){
     computer.textContent = getComputerChiose();
     if (value == random) {
     result.textContent = "Draw";
-    }else if (value>random){
-    result.textContent = "You Win";
+    }else if (random == 2){
+    result.textContent = "You Lose";
     }else{
-        result.textContent = "you Lose";
+        result.textContent = "you Win";
     }
     
 }
@@ -38,7 +38,7 @@ paperbtn.onclick = function(){
     computer.textContent = getComputerChiose();
     if (value == random) {
     result.textContent = "Draw";
-    }else if (value>random){
+    }else if (value == 1){
     result.textContent = "You Win";
     }else{
         result.textContent = "you Lose";
@@ -50,7 +50,7 @@ scissorsbtn.onclick = function(){
     computer.textContent = getComputerChiose();
     if (value == random) {
     result.textContent = "Draw";
-    }else if (value>random){
+    }else if (value == 2){
     result.textContent = "You Win";
     }else{
         result.textContent = "you Lose";
