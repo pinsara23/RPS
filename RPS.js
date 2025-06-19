@@ -8,52 +8,74 @@ let random;
 function getComputerChiose(){
     random = Math.floor(Math.random() * 3) + 1; 
     if (random == 1) {
-        return "Computer: Rock";
+        return "Rock";
         
     } else if (random == 2) {
-        return "Computer: Paper";
+        return "Paper";
     } else {
-        return "Computer: Scissors";
+        return "Scissors";
     }
     
 }
-//let random = Math.floor(Math.random() * 3) + 1; 
+
 let value;
 rockbtn.onclick = function(){
     value = 1;
     you.textContent = "You: Rock";
-    computer.textContent = getComputerChiose();
-    if (value == random) {
-    result.textContent = "Draw";
-    }else if (random == 2){
-    result.textContent = "You Lose";
-    }else{
-        result.textContent = "you Win";
+    let comChoice = getComputerChiose();
+    computer.textContent = "Computer: "+comChoice;
+    console.log(comChoice+" "+random);
+    switch (random) {
+        case 1:
+            result.textContent = "Draw";
+            break;
+        case 2:
+            result.textContent = "Lose";
+            break;
+        case 3:
+            result.textContent = "Win";
+            break;
+        
     }
+    
     
 }
 paperbtn.onclick = function(){
     value = 2;
     you.textContent = "You: Paper";
-    computer.textContent = getComputerChiose();
-    if (value == random) {
-    result.textContent = "Draw";
-    }else if (value == 1){
-    result.textContent = "You Win";
-    }else{
-        result.textContent = "you Lose";
+    let comChoice = getComputerChiose();
+    computer.textContent = "Computer: "+comChoice;
+    console.log(comChoice+" "+random);
+    switch (random) {
+        case 1:
+            result.textContent = "Win";
+            break;
+        case 2:
+            result.textContent = "Draw";
+            break;
+        case 3:
+            result.textContent = "Lose";
+            break;
+        
     }
 }
 scissorsbtn.onclick = function(){
     value = 3;
     you.textContent = "You: Scissors";
-    computer.textContent = getComputerChiose();
-    if (value == random) {
-    result.textContent = "Draw";
-    }else if (value == 2){
-    result.textContent = "You Win";
-    }else{
-        result.textContent = "you Lose";
+   let comChoice = getComputerChiose();
+    computer.textContent = "Computer: "+comChoice;
+    console.log(comChoice+" "+random);
+    switch (random) {
+        case 1:
+            result.textContent = "Lose";
+            break;
+        case 2:
+            result.textContent = "Win";
+            break;
+        case 3:
+            result.textContent = "Draw";
+            break;
+        
     }
 }
 
